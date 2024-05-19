@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --topbunn: linear-gradient(to right, #87D4FF, #0A2F6D, #0A2F6D);
+    --background: linear-gradient(#87D4FF, transparent, #87D4FF);
+    --darkBlue: #0A2F6D;
+    --detaljer: #87D4FF;
+    --tekst2: white;
+    --border: #FFFFFF;
+
+}
+
+body {
+    background-color: var(--darkBlue);
+    display: grid;
+    grid-auto-rows: 10vh 90vh 75px;
+    margin: 0;
+}
+
+/* HEADER*/
+header {
+    grid-row: 1;
+    background-image: var(--topbunn);
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    justify-content: space-between;
+}
+
+
+.navbar ul li {
+    margin-left: 50px;
+    cursor: pointer;
+    font-size: 30px;
+    font-family: "Freeman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    list-style: none;
+    display: inline-block;
+    position: relative;
+
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--tekst2);
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: "";
+    height: 5px;
+    width: 0;
+    background-image: linear-gradient(to right, #87D4FF, #87D4FF, #27406a90);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.8s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+
+}
+
+#home {
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    margin-left: 50px;
+    justify-content: space-between;
+}
+
+/* DROPDOWNMENU*/
+.dropbtn {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--tekst2);
+    padding: 5px;
+    border-radius: 10%;
+    font-size: 30px;
+    font-family: "Freeman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#dropdown {
+    margin-left: 50px;
+    justify-content: space-between;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10%;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: var(--tekst2);
+    padding: 10px 25px;
+    font-size: 30px;
+    font-family: "Freeman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown-content a:hover {
+    color: var(--detaljer);
+}
+
+#dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#dropdown:hover .dropbtn {
+    background-color: var(--detaljer);
+}
+
+
+
+
+/*Index*/
+#background-video {
+    grid-row: 2;
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#startPage {
+    background-color: transparent;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gameKnapp {
+    width: 300px;
+    height: 100%;
+    font-size: 50px;
+    font-family: "Freeman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--tekst2);
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    border-left: 5px solid var(--detaljer);
+    border-top: transparent;
+    border-bottom: transparent;
+    cursor: pointer;
+}
+
+#botPlayer {
+    border-right: 5px solid var(--detaljer);
+}
+
+.gameKnapp:hover {
+    backdrop-filter: blur(50px);
+    font-size: 45px;
+
+}
+
+.difficulty {
+    width: 350px;
+    height: 100%;
+    font-size: 50px;
+    font-family: "Freeman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--tekst2);
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    border-left: 5px solid var(--detaljer);
+    border-top: transparent;
+    border-bottom: transparent;
+    cursor: pointer;
+    transform: skew(15deg)
+}
+
+#hardMode {
+    border-right: 5px solid var(--detaljer);
+}
+
+.difficulty:hover {
+    backdrop-filter: blur(50px);
+    font-size: 45px;
+}
+
+/*SHOP*/
+
+/*Bakgrunnshop*/
+#bakgrunnShop {
+    padding: 60px;
+    display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 10px;
+	height: 100%;
+    width: 100%;
+}
+
+.bakgrunnItem {
+    margin: auto;
+    cursor: pointer;
+    height: 250px;
+    width: 400px;
+    border: 5px solid var(--border);
+    border-radius: 10%;
+}
+
+.bakgrunnItemAfter {
+    margin: auto;
+    cursor: pointer;
+    height: 250px;
+    width: 400px;
+    border: 5px solid var(--border);
+    border-radius: 10%;
+}
+
+#default {
+    background-image: linear-gradient(to right, var(--detaljer), var(--darkBlue), var(--darkBlue), var(--detaljer));
+}
+
+#basket {
+    background-image: url("Bilder/bakgrunnBasket.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#classic {
+    background-image: url("Bilder/bakgrunnClassic.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#purple {
+    background-image: linear-gradient(to right, rgb(177, 81, 177), rgb(88, 1, 88), rgb(88, 1, 88), rgb(177, 81, 177));
+}
+
+#green {
+    background-image: linear-gradient(to right, rgb(28, 171, 28), rgb(1, 73, 1), rgb(1, 73, 1), rgb(28, 171, 28));
+}
+
+#fotball {
+    background-image: url("Bilder/bakgrunnFotball.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.check {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    background-image: url("Bilder/checkTomBakgrunn.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/*Scoreboard*/
+#HighScoreboard {
+    justify-self: center;
+    margin: auto;
+    padding-top: 40px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-family: "Freeman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    height: 400px;
+    width: 600px;
+    background-image: var(--background);
+    border: 10px solid var(--detaljer);
+    backdrop-filter: blur(15px);
+    border-radius: 10%;
+    flex-direction: column;
+    color: var(--tekst2);
+
+}
+
+.HSholders {
+    padding-top: 20px;
+}
+
+/*RESULTAT*/
+#resultat {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    display: grid;
+    grid-template-rows: 200px 100px;
+    justify-self: center;
+    background-color: rgba(128, 128, 128, 0.531);
+    backdrop-filter: blur(15px);
+}
+
+#resultath1 {
+    cursor: default;
+    grid-row: 1;
+    font-size: 100px;
+    color: var(--tekst2);
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+
+#icons {
+    grid-row: 2;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#replay, #home2 {
+    display: none;
+    cursor: pointer;
+    margin-top: 25px;
+    height: 75px;
+    align-self: center;
+}
+
+/*canvas*/
+canvas {
+    margin: auto;
+    border: 10px solid var(--border);
+    background-image: linear-gradient(to right, var(--detaljer), var(--darkBlue), var(--darkBlue), var(--detaljer));
+    background-size: cover;
+    background-position: center;
+
+}
+
+#countDown {
+    cursor: default;
+    color: var(--tekst2);
+    margin-left: auto;
+    font-size: 100px;
+    font-family: "Freeman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: absolute;
+}
+
+/*FOOTER*/
+footer {
+    background-image: var(--topbunn);
+    grid-row: 3;
+    display: flex;
+}
+
+#footerTag {
+    font-size: 20px;
+    margin: 30px auto;
+    color: var(--tekst2);
+}
